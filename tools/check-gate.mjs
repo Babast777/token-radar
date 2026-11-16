@@ -1,5 +1,6 @@
 // Local stand-in for the seven gate rows. The kit has no grade-local for this bounty.
-// Usage: node tools/check-gate.mjs out
+// Usage: node tools/check-gate.mjs <output-dir> <snapshot.json>
+// The snapshot is the kit's sealed file, not a copy in this repository.
 
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
@@ -7,7 +8,8 @@ import { createHash } from 'node:crypto';
 import { buildDossier } from '../vendor/makefun-board.ts';
 
 const out = process.argv[2] ?? 'out';
-const snap = JSON.parse(readFileSync(new URL('../input/snapshot.json', import.meta.url), 'utf8'));
+const snapshotPath = process.argv[3] ?? '/tmp/token-radar-01-kit/input/snapshot.json';
+const snap = JSON.parse(readFileSync(snapshotPath, 'utf8'));
 const fails = [];
 const note = (row, ok, detail) => {
   console.log(`${ok ? 'pass' : 'FAIL'}  ${row}${detail ? `  ${detail}` : ''}`);

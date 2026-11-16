@@ -3,7 +3,8 @@
 // Reads the sealed snapshot, scores every ranked protocol with lib/model.ts, and writes
 // board.json, data.js, a copy of dashboard/ and screenshots/, and dossier.json.
 //
-//   mkdir -p out && node main.ts --input input/snapshot.json --output out
+//   mkdir -p out && node main.ts --input <kit>/input/snapshot.json --output out
+// With no --input, the grader's /input/snapshot.json is read.
 
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

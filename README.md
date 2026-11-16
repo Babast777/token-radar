@@ -9,18 +9,18 @@ Fathom is a pre-token launch board for the make.fun bounty. It reads the sealed 
 ## Run it
 
 ```sh
-mkdir -p out && node main.ts --input input/snapshot.json --output out
+mkdir -p out && node main.ts --input <kit>/input/snapshot.json --output out
 ```
 
-`main.ts` uses the Node 22 standard library only. It does not use the network. The grader runs the same file with `/input/snapshot.json` and `/output`.
+`main.ts` uses the Node 22 standard library only. It does not use the network. With no `--input`, it reads `/input/snapshot.json`, which is what the grader mounts. Locally, pass the kit's copy.
 
 ## Regenerate the board
 
-The ranked board is computed when `main.ts` runs. `lib/public.json` is the public-check snapshot it reads offline. To refresh those checks from the public APIs and then rebuild:
+The ranked board is computed when `main.ts` runs. `lib/public.json` is the public-check snapshot it reads offline. To refresh those checks from the public APIs and then rebuild, using the kit's sealed snapshot:
 
 ```sh
-node tools/fetch-public.mjs --snapshot input/snapshot.json
-mkdir -p out && node main.ts --input input/snapshot.json --output out
+node tools/fetch-public.mjs --snapshot <kit>/input/snapshot.json
+mkdir -p out && node main.ts --input <kit>/input/snapshot.json --output out
 ```
 
 `tools/fetch-public.mjs` is not part of the graded run. Open `out/dashboard/index.html` for the board. A detail view is `#p=<slug>`. The caution filter is `#preset=caution`.

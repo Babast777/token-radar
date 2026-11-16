@@ -1,8 +1,7 @@
 // Refresh lib/public.json from public APIs. The grader never runs this: main.ts has no network.
 // Every figure written here is a response field. A failed source is recorded and left blank.
 //
-//   node tools/fetch-public.mjs
-//   node tools/fetch-public.mjs --snapshot /path/to/snapshot.json
+//   node tools/fetch-public.mjs --snapshot <kit>/input/snapshot.json
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
