@@ -1,0 +1,2685 @@
+{
+  "fetched_at": "2026-11-16T11:55:17.960Z",
+  "gas_units": {
+    "transfer": 21000,
+    "swap": 160000,
+    "deposit": 250000
+  },
+  "sources": [
+    "https://api.llama.fi/protocols",
+    "https://stablecoins.llama.fi/stablecoins",
+    "https://api.dexscreener.com/latest/dex/search",
+    "https://api.gopluslabs.io/api/v1/token_security/",
+    "https://api.gopluslabs.io/api/v1/solana/token_security",
+    "https://api.honeypot.is/v2/IsHoneypot",
+    "https://coins.llama.fi/prices/current",
+    "https://ethereum-rpc.publicnode.com",
+    "https://base-rpc.publicnode.com",
+    "https://arbitrum-one-rpc.publicnode.com",
+    "https://optimism-rpc.publicnode.com",
+    "https://bsc-rpc.publicnode.com",
+    "https://polygon-bor-rpc.publicnode.com",
+    "https://avalanche-c-chain-rpc.publicnode.com",
+    "https://solana-rpc.publicnode.com",
+    "https://mempool.space/api/v1/fees/recommended"
+  ],
+  "errors": [
+    {
+      "source": "security infinifi",
+      "error": "404 https://api.honeypot.is/v2/IsHoneypot?address=0x76675B96ab5403B52d41CBb54f846615Cc265F03&chainID=8453"
+    },
+    {
+      "source": "security robinhood",
+      "error": "404 https://api.honeypot.is/v2/IsHoneypot?address=0xA394dCEa3fd3847fD793afBFd163E2e3858B7c65&chainID=56"
+    },
+    {
+      "source": "security usdt0",
+      "error": "400 https://api.honeypot.is/v2/IsHoneypot?address=0x779Ded0c9e1022225f8E0630b35a9b54bE713736&chainID=5000"
+    },
+    {
+      "source": "https://polygon-bor-rpc.publicnode.com",
+      "error": "no native price"
+    }
+  ],
+  "fee_by_chain": {
+    "Ethereum": {
+      "gwei": 0.1367,
+      "native_usd": 1809.05,
+      "transfer_usd": 0.0052,
+      "swap_usd": 0.0396,
+      "deposit_usd": 0.0618,
+      "source": "https://ethereum-rpc.publicnode.com eth_gasPrice"
+    },
+    "Base": {
+      "gwei": 0.006,
+      "native_usd": 1809.05,
+      "transfer_usd": 0.0002,
+      "swap_usd": 0.0017,
+      "deposit_usd": 0.0027,
+      "source": "https://base-rpc.publicnode.com eth_gasPrice"
+    },
+    "Arbitrum": {
+      "gwei": 0.02,
+      "native_usd": 1809.05,
+      "transfer_usd": 0.0008,
+      "swap_usd": 0.0058,
+      "deposit_usd": 0.009,
+      "source": "https://arbitrum-one-rpc.publicnode.com eth_gasPrice"
+    },
+    "Optimism": {
+      "gwei": 0.001,
+      "native_usd": 1809.05,
+      "transfer_usd": 0,
+      "swap_usd": 0.0003,
+      "deposit_usd": 0.0005,
+      "source": "https://optimism-rpc.publicnode.com eth_gasPrice"
+    },
+    "Binance": {
+      "gwei": 0.05,
+      "native_usd": 590.28,
+      "transfer_usd": 0.0006,
+      "swap_usd": 0.0047,
+      "deposit_usd": 0.0074,
+      "source": "https://bsc-rpc.publicnode.com eth_gasPrice"
+    },
+    "Avalanche": {
+      "gwei": 7.5,
+      "native_usd": 7.15,
+      "transfer_usd": 0.0011,
+      "swap_usd": 0.0086,
+      "deposit_usd": 0.0134,
+      "source": "https://avalanche-c-chain-rpc.publicnode.com eth_gasPrice"
+    },
+    "Solana": {
+      "prioritization_microlamports": 0,
+      "base_lamports": 5000,
+      "native_usd": 71.41,
+      "transfer_usd": 0.0004,
+      "swap_usd": 0.0007,
+      "deposit_usd": 0.0007,
+      "source": "https://solana-rpc.publicnode.com getRecentPrioritizationFees plus the 5000-lamport signature fee"
+    },
+    "Bitcoin": {
+      "sat_per_vbyte": 1,
+      "native_usd": 64497,
+      "transfer_usd": 0.0903,
+      "swap_usd": 0.0903,
+      "deposit_usd": 0.1451,
+      "source": "https://mempool.space/api/v1/fees/recommended halfHourFee, 140 vB transfer and 225 vB deposit"
+    }
+  },
+  "fee_fallback": {
+    "transfer_usd": 0.0003,
+    "swap_usd": 0.0026,
+    "deposit_usd": 0.0041,
+    "note": "Median is not used. This is the mean of the Base, Arbitrum and Optimism samples, for a chain with no sample of its own."
+  },
+  "parent": {
+    "3jane-lending": "parent#3jane",
+    "aave-horizon-rwa": "parent#aave",
+    "aave-v1": "parent#aave",
+    "aave-v2": "parent#aave",
+    "aave-v3": "parent#aave",
+    "aave-v4": "parent#aave",
+    "adrastea-validator": "parent#adrastea",
+    "aegis-yusd": "parent#aegis",
+    "aera-v2": "parent#aera",
+    "aera-v3": "parent#aera",
+    "aero-basic": "parent#aero-protocol",
+    "aero-slipstream": "parent#aero-protocol",
+    "aerodrome-ignition": "parent#aero-protocol",
+    "aerodrome-slipstream": "parent#aero-protocol",
+    "aerodrome-v1": "parent#aero-protocol",
+    "aevo-perps": "parent#aevo",
+    "aftermath-aflp": "parent#aftermath-finance",
+    "alchemix-v3": "parent#alchemix",
+    "alpaca-finance-2.0": "parent#alpaca-finance",
+    "alpaca-leveraged-yield-farming": "parent#alpaca-finance",
+    "apeswap-amm": "parent#apeswap",
+    "apex-omni": "parent#apex-protocol",
+    "arbitrum-bridge": "parent#arbitrum-foundation",
+    "arcadia-v2": "parent#arcadia-finance",
+    "arcus-perps": "parent#arcus",
+    "arrakis-modular": "parent#arrakis-finance",
+    "aster-asbnb": "parent#astherus",
+    "aster-bridge": "parent#astherus",
+    "aster-usdf": "parent#astherus",
+    "avalon-cedefi": "parent#avalon-labs",
+    "avalon-superearn": "parent#avalon-labs",
+    "avant-aveth": "parent#avant-protocol",
+    "avant-avusd": "parent#avant-protocol",
+    "axelar": "parent#axelar-network",
+    "azverse-perps": "parent#azverse",
+    "balancer-v2": "parent#balancer",
+    "balancer-v3": "parent#balancer",
+    "bancor-v2.1": "parent#bancor",
+    "bancor-v3": "parent#bancor",
+    "bdex-v3": "parent#bdex",
+    "bedrock-unibtc": "parent#bedrock",
+    "bedrock-unieth": "parent#bedrock",
+    "benqi-lending": "parent#benqi",
+    "benqi-staked-avax": "parent#benqi",
+    "bifrost-liquid-staking": "parent#bifrost-protocol",
+    "bitfi-basis": "parent#bitfi",
+    "blend-pools-v2": "parent#blend",
+    "bluefin-spot": "parent#bluefin",
+    "blur-bids": "parent#blur",
+    "bonk-staked-sol": "parent#bonkfun",
+    "boros": "parent#pendle",
+    "btcfi-cdp": "parent#btcfi",
+    "bucket-cdp": "parent#bucket-protocol",
+    "bucket-protocol-v2": "parent#bucket-protocol",
+    "bulbaswap-v3": "parent#bulbaswap",
+    "ccip": "parent#chainlink",
+    "cetus-clmm": "parent#cetus",
+    "chainflip-amm": "parent#chainflip",
+    "chamber-vaults": "parent#dhedge",
+    "cian-yield-layer": "parent#cian-protocol",
+    "circle-gateway": "parent#circle",
+    "clearpool-tpool": "parent#clearpool",
+    "coindcx": "parent#coindcx",
+    "compound-v2": "parent#compound-finance",
+    "compound-v3": "parent#compound-finance",
+    "connext": "parent#everclear",
+    "contango-v2": "parent#contango",
+    "crvusd": "parent#curve-finance",
+    "curve-dex": "parent#curve-finance",
+    "curve-llamalend": "parent#curve-finance",
+    "curve-llamalend-v2": "parent#curve-finance",
+    "deepbook-v3": "parent#deepbook",
+    "defi-saver-asset-management": "parent#defi-saver",
+    "deri-v4": "parent#deri",
+    "derive-v3-options": "parent#lyra",
+    "dexalot-portfolio": "parent#dexalot",
+    "dodo-amm": "parent#dodo",
+    "drift-staked-sol": "parent#drift",
+    "dydx-v3": "parent#dydx",
+    "dydx-v4": "parent#dydx",
+    "echo-bridge": "parent#echo-protocol",
+    "edgex-bridge": "parent#edgex",
+    "ekubo": "parent#ekubo",
+    "ethena-usde": "parent#ethena",
+    "ethena-usdtb": "parent#ethena",
+    "ether.fi-liquid": "parent#ether-fi",
+    "ether.fi-stake": "parent#ether-fi",
+    "etherfi-borrowing-market": "parent#ether-fi",
+    "etherfi-cash-liquid": "parent#ether-fi",
+    "euler-v2": "parent#euler",
+    "exponent-risk-tranching": "parent#exponent",
+    "exponent-strategy-vaults": "parent#exponent",
+    "exponent-yield-exchange": "parent#exponent",
+    "extended-perps": "parent#extended",
+    "extra-finance-leverage-farming": "parent#extra-finance",
+    "felix-cdp": "parent#felix",
+    "felix-vaults": "parent#felix",
+    "figure-markets-exchange": "parent#figure-markets",
+    "figure-markets-prime": "parent#figure-markets",
+    "fluid-dex": "parent#fluid",
+    "fluid-lending": "parent#fluid",
+    "fluid-lite": "parent#fluid",
+    "flying-tulip-ftusd": "parent#flying-tulip",
+    "flying-tulip-lend": "parent#flying-tulip",
+    "folks-finance-lending": "parent#folks-finance",
+    "frax": "parent#frax-finance",
+    "frax-ether": "parent#frax-finance",
+    "frax-swap": "parent#frax-finance",
+    "frax-usd": "parent#frax-finance",
+    "fraxlend": "parent#frax-finance",
+    "futarchy-amm": "parent#metadao",
+    "gain": "parent#kelp-dao",
+    "gate-sol": "parent#gate-products",
+    "gmx-evm": "parent#gmx",
+    "gmx-solana": "parent#gmx",
+    "goplus-locker-v3": "parent#goplus-security",
+    "grvt-bridge": "parent#grvt",
+    "haedal-lending-vault": "parent#haedal",
+    "haedal-protocol": "parent#haedal",
+    "hatom-lending": "parent#hatom-protocol",
+    "hubra-staked-sol": "parent#hubra",
+    "hydro-lending": "parent#hydro-protocol",
+    "hydro-lst": "parent#hydro-protocol",
+    "hylo-lsts": "parent#hylo",
+    "hylo-protocol": "parent#hylo",
+    "hyperbeat-earn": "parent#hyperbeat",
+    "hyperbeat-lst": "parent#hyperbeat",
+    "hyperlend-pooled": "parent#hyperlend",
+    "hyperliquid-bridge": "parent#hyperliquid",
+    "hyperliquid-earn": "parent#hyperliquid",
+    "hyperliquid-hlp": "parent#hyperliquid",
+    "hyperliquid-spot-orderbook": "parent#hyperliquid",
+    "hyperswap-v2": "parent#hyperswap",
+    "hyperswap-v3": "parent#hyperswap",
+    "icarus-cl": "parent#icarus",
+    "idex-v1": "parent#idex",
+    "inceptionlrt-(isolated-restaking)": "parent#inception",
+    "inverse-finance-firm": "parent#inverse-finance",
+    "ipor-fusion": "parent#ipor",
+    "jito-liquid-staking": "parent#jito",
+    "jito-restaking": "parent#jito",
+    "joe-dex": "parent#trader-joe",
+    "juicebox-v1": "parent#juicebox",
+    "jupiter-lend": "parent#jupiter",
+    "jupiter-lend-dex": "parent#jupiter",
+    "jupiter-perpetual-exchange": "parent#jupiter",
+    "jupiter-staked-sol": "parent#jupiter",
+    "jupusd": "parent#jupiter",
+    "justlend-strx": "parent#justlend",
+    "justlend-v1": "parent#justlend",
+    "kamino-lend": "parent#kamino-finance",
+    "kamino-liquidity": "parent#kamino-finance",
+    "katana-dex": "parent#katana-ronin-dex",
+    "kelp": "parent#kelp-dao",
+    "kinetiq-earn": "parent#kinetiq",
+    "kinetiq-elysium-bridge": "parent#kinetiq",
+    "kinetiq-khype": "parent#kinetiq",
+    "kinetiq-kmhype": "parent#kinetiq",
+    "kodiak-islands": "parent#kodiak",
+    "kodiak-v3": "parent#kodiak",
+    "layerzero-v2": "parent#layerzero",
+    "lighter-bridge": "parent#lighter",
+    "lighter-llp": "parent#lighter",
+    "lighter-robinhood-perps": "parent#lighter",
+    "liminal-basis": "parent#liminal",
+    "liquity-v1": "parent#liquity",
+    "liquity-v2": "parent#liquity",
+    "lista-cdp": "parent#lista-dao",
+    "lista-dex": "parent#lista-dao",
+    "lista-lending": "parent#lista-dao",
+    "lista-liquid-staking": "parent#lista-dao",
+    "lombard-btc.b": "parent#lombard-finance",
+    "lombard-lbtc": "parent#lombard-finance",
+    "lombard-vaults": "parent#lombard-finance",
+    "looped-hype": "parent#looping-collective",
+    "loopscale-curation": "parent#loopscale",
+    "loopscale-lending": "parent#loopscale",
+    "lorenzo-enzobtc": "parent#lorenzo-protocol",
+    "lorenzo-susd1+": "parent#lorenzo-protocol",
+    "maple": "parent#maple-finance",
+    "marginfi-lending": "parent#marginfi",
+    "marginfi-lst": "parent#marginfi",
+    "marinade-liquid-staking": "parent#marinade-finance",
+    "marinade-native": "parent#marinade-finance",
+    "marinade-select": "parent#marinade-finance",
+    "mellow-core": "parent#mellow-protocol",
+    "mellow-restaking": "parent#mellow-protocol",
+    "mento-v2": "parent#mento",
+    "merchant-moe-liquidity-book": "parent#merchant-moe",
+    "meta-pool-eth": "parent#meta-pool",
+    "meta-pool-near": "parent#meta-pool",
+    "metalx-lending": "parent#metalx",
+    "metalx-swap": "parent#metalx",
+    "meteora-damm-v1": "parent#meteora",
+    "meteora-damm-v2": "parent#meteora",
+    "meteora-dlmm": "parent#meteora",
+    "meteora-vaults": "parent#meteora",
+    "metric-v1": "parent#metric",
+    "metronome-synth": "parent#metronome",
+    "minswap-dex": "parent#minswap",
+    "moonwell-lending": "parent#moonwell",
+    "moonwell-vaults": "parent#moonwell",
+    "morpho-blue": "parent#morpho",
+    "morpho-midnight": "parent#morpho",
+    "mstable-v2": "parent#dhedge",
+    "mux-perps": "parent#mux-protocol",
+    "mystic-finance-lending": "parent#mystic-finance",
+    "nado-spot": "parent#nado",
+    "native-credit-pool": "parent#native",
+    "navi-curator": "parent#navi-protocol",
+    "navi-lending": "parent#navi-protocol",
+    "near-bridge": "parent#near-protocol",
+    "near-intents": "parent#near-protocol",
+    "neopin-staking": "parent#neopin",
+    "nest-cl": "parent#nest",
+    "nexus-mutual-insurance": "parent#nexus-mutual",
+    "optimism-bridge": "parent#optimism-foundation",
+    "orca-dex": "parent#orca",
+    "orderly-bridge": "parent#orderly-network",
+    "origin-arm": "parent#origin-defi",
+    "origin-dollar": "parent#origin-defi",
+    "origin-ether": "parent#origin-defi",
+    "pacifica-bridge": "parent#pacifica",
+    "pancakeswap-amm": "parent#pancakeswap",
+    "pancakeswap-amm-v3": "parent#pancakeswap",
+    "pancakeswap-infinity": "parent#pancakeswap",
+    "paradex-bridge": "parent#paradex",
+    "pendle-loop": "parent#pendle",
+    "pendle-v2": "parent#pendle",
+    "perena-vaults": "parent#perena",
+    "pharaoh-dlmm": "parent#pharaoh-exchange",
+    "pharaoh-v3": "parent#pharaoh-exchange",
+    "phase-delegation": "parent#phase",
+    "phoenix-perp": "parent#phoenix",
+    "polymarket-international": "parent#polymarket",
+    "popdex-bridge": "parent#popdex",
+    "potatoswap-v2": "parent#potatoswap",
+    "privacy-pools-v1": "parent#privacy-pools",
+    "puffer-stake": "parent#puffer-finance",
+    "pulsex-v1": "parent#pulsex",
+    "pulsex-v2": "parent#pulsex",
+    "pumpswap": "parent#pump",
+    "quickswap-dex": "parent#quickswap",
+    "quickswap-v3": "parent#quickswap",
+    "radpie": "parent#magpie-ecosystem",
+    "ramses-cl-v2": "parent#ramses-exchange-hl",
+    "raydium-amm": "parent#raydium",
+    "realt-rmm-marketplace-v2": "parent#realt",
+    "realt-tokens": "parent#realt",
+    "resolv-usr": "parent#resolv",
+    "reya-perps": "parent#reya",
+    "rhea-dex": "parent#rhea-finance",
+    "rhea-lend": "parent#rhea-finance",
+    "rhea-lst": "parent#rhea-finance",
+    "ring-few": "parent#ring-protocol",
+    "river-omni-cdp": "parent#river-inc",
+    "rocketswap-anubis-v2": "parent#rocketswap-anubis",
+    "royco-v2": "parent#royco-protocol",
+    "rysk-v12": "parent#rysk-finance",
+    "sanctum-infinity": "parent#sanctum",
+    "sanctum-reserve": "parent#sanctum",
+    "sanctum-validator-lsts": "parent#sanctum",
+    "saphyre-v3": "parent#dragon-swap",
+    "saucerswap-v1": "parent#saucerswap",
+    "saucerswap-v2": "parent#saucerswap",
+    "save": "parent#save-protocol",
+    "save-sol": "parent#save-protocol",
+    "scallop-lend": "parent#scallop",
+    "seamless-v2": "parent#seamless-protocol",
+    "sentora-curator": "parent#sentora",
+    "sky-lending": "parent#maker",
+    "sky-money": "parent#maker",
+    "sky-rwa": "parent#maker",
+    "sodex-bridge": "parent#sosovalue",
+    "solayer-restaking": "parent#solayer",
+    "solv-basis-trading": "parent#solv-protocol",
+    "solv-rwa": "parent#solv-protocol",
+    "solv-strategies": "parent#solv-protocol",
+    "solvbtc": "parent#solv-protocol",
+    "solvbtc-lsts": "parent#solv-protocol",
+    "sosovalue-indexes": "parent#sosovalue",
+    "sovryn-dex": "parent#sovryn",
+    "sovryn-zero": "parent#sovryn",
+    "spark-liquidity-layer": "parent#spark",
+    "spark-savings": "parent#spark",
+    "sparkdex-v3.1": "parent#sparkdex",
+    "sparkdex-v4": "parent#sparkdex",
+    "sparklend": "parent#spark",
+    "spectra-metavaults": "parent#spectra",
+    "spectra-v2": "parent#spectra",
+    "springsui": "parent#suilend-protocol",
+    "stake-dao-yield": "parent#stake-dao",
+    "stake.link-liquid": "parent#stake.link",
+    "stakestone-stone": "parent#stakestone",
+    "stakewise-v3": "parent#stakewise",
+    "stargate-v1": "parent#stargate-finance",
+    "stargate-v2": "parent#stargate-finance",
+    "stellar-defi-hub": "parent#sentora",
+    "sthype": "parent#valantis",
+    "strata-markets": "parent#strata",
+    "strato-cdp": "parent#strato",
+    "suilend": "parent#suilend-protocol",
+    "summer.fi-pro": "parent#summer.fi",
+    "sunswap-v1": "parent#sun",
+    "sunswap-v2": "parent#sun",
+    "sunswap-v3": "parent#sun",
+    "sunswap-v4": "parent#sun",
+    "sunx-bridge": "parent#sun",
+    "sushi-stellar": "parent#sushi",
+    "sushiswap": "parent#sushi",
+    "sushiswap-v3": "parent#sushi",
+    "swell-liquid-restaking": "parent#swell",
+    "swell-liquid-staking": "parent#swell",
+    "synapse-cross-chain-bridge": "parent#synapse",
+    "syncswap": "parent#syncswap-protocol",
+    "tangible-rwa": "parent#tangible",
+    "tbtc": "parent#threshold-network",
+    "templar-lending": "parent#templar-protocol",
+    "tempo-stablecoin-dex": "parent#tempo-dex",
+    "the-vault-liquid-staking": "parent#the-vault",
+    "theo-network-thbill": "parent#theo",
+    "theo-network-thusd": "parent#theo",
+    "tonstakers-lsd": "parent#tonstakers",
+    "turboflow-perps": "parent#turboflow",
+    "txflow-bridge": "parent#txflow",
+    "ultrayield-curator": "parent#ultrayield",
+    "ultrayield-vaults": "parent#ultrayield",
+    "uncx-network-v2": "parent#uncx-network",
+    "uncx-network-v3": "parent#uncx-network",
+    "uniswap-v2": "parent#uniswap",
+    "uniswap-v3": "parent#uniswap",
+    "uniswap-v4": "parent#uniswap",
+    "unitas-usdu": "parent#unitas",
+    "unitus": "parent#dforce",
+    "usdcx": "parent#circle",
+    "usual-usd0": "parent#usual",
+    "valantis-sthype-restaking": "parent#valantis",
+    "valdora-finance": "parent#valdora",
+    "vault-street": "parent#resolv",
+    "venus-core-pool": "parent#venus-finance",
+    "vesper-v1": "parent#vesper",
+    "vesper-v2": "parent#vesper",
+    "vfat.io": "parent#vfat",
+    "volo-lst": "parent#navi-protocol",
+    "vvs-standard": "parent#vvs-finance",
+    "wemix.fi-staking": "parent#wemix.fi",
+    "xalgo-liquid-staking": "parent#folks-finance",
+    "yearn-curating": "parent#yearn",
+    "yearn-finance": "parent#yearn",
+    "yield-yak-aggregator": "parent#yield-yak",
+    "zest-v2": "parent#zest"
+  },
+  "info": {
+    "3f": {
+      "url": "https://www.3f.xyz/",
+      "twitter": "3f_xyz",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "3jane-lending": {
+      "url": "https://www.3jane.xyz/",
+      "twitter": "3janexyz",
+      "audits": 0
+    },
+    "9summits": {
+      "url": "https://9summits.io",
+      "twitter": "nine_summits",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "abstract": {
+      "url": "https://www.abs.xyz/",
+      "twitter": "AbstractChain",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "adrastea-validator": {
+      "url": "https://adrastea.fi/",
+      "twitter": "AdrasteaFinance",
+      "audits": 0
+    },
+    "aegis-yusd": {
+      "url": "https://app.aegis.im",
+      "twitter": "aegis_im",
+      "audits": 0
+    },
+    "aera-v2": {
+      "url": "https://www.aera.finance",
+      "twitter": "aerafinance",
+      "audits": 0
+    },
+    "aera-v3": {
+      "url": "https://www.aera.finance",
+      "twitter": "aerafinance",
+      "audits": 0
+    },
+    "aftermath-aflp": {
+      "url": "https://aftermath.finance",
+      "twitter": "AftermathFi",
+      "audits": 0
+    },
+    "agni-finance": {
+      "url": "https://agni.finance/",
+      "twitter": "Agnidex",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "agua": {
+      "url": "",
+      "twitter": "aguavaults",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "alphagrowth": {
+      "url": "https://app.euler.finance/governor/alphagrowth?network=unichain",
+      "twitter": "alphagrowth1",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "anemoy-capital": {
+      "url": "https://www.anemoy.io",
+      "twitter": "anemoycapital",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "antarctic": {
+      "url": "https://www.antarctic.exchange/",
+      "twitter": "Antarctic_EX",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "anthias-labs": {
+      "url": "https://anthias.xyz",
+      "twitter": "anthiasxyz",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "apex-omni": {
+      "url": "https://omni.apex.exchange",
+      "twitter": "OfficialApeXdex",
+      "audits": 0
+    },
+    "arcus-perps": {
+      "url": "https://arcus.xyz/",
+      "twitter": "arcus_xyz",
+      "audits": 0
+    },
+    "armitage-by-wintermute": {
+      "url": "https://armitage.wintermute.com",
+      "twitter": "wintermute_t",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "arrakis-modular": {
+      "url": "https://arrakis.finance/",
+      "twitter": "ArrakisFinance",
+      "audits": 0
+    },
+    "aster-bridge": {
+      "url": "https://www.asterdex.com",
+      "twitter": "Aster_DEX",
+      "audits": 0
+    },
+    "august-digital": {
+      "url": "https://augustdigital.io/",
+      "twitter": "august_digital",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "avant-aveth": {
+      "url": "https://app.avantprotocol.com/?ref=defillama",
+      "twitter": "avantprotocol",
+      "audits": 0
+    },
+    "avant-avusd": {
+      "url": "https://app.avantprotocol.com/products",
+      "twitter": "avantprotocol",
+      "audits": 0
+    },
+    "axis": {
+      "url": "https://axis.to",
+      "twitter": "AxisFDN",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "azverse-perps": {
+      "url": "",
+      "twitter": "AZverse_Global",
+      "audits": 0
+    },
+    "b14g": {
+      "url": "https://www.b14g.xyz/",
+      "twitter": "b14g_network",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 1,
+      "hack_names": [
+        "b14g"
+      ]
+    },
+    "base-bridge": {
+      "url": "https://docs.base.org/base-chain/network-information/bridges-mainnet",
+      "twitter": "BuildOnBase",
+      "audits": 0
+    },
+    "bdex-v3": {
+      "url": "https://dex.botchain.ai/",
+      "twitter": "BOTChain_ai",
+      "audits": 0
+    },
+    "bend": {
+      "url": "https://bend.berachain.com",
+      "twitter": "berachain",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "bigone": {
+      "url": "https://big.one",
+      "twitter": "BigONEexchange",
+      "audits": 0
+    },
+    "bima-cdp": {
+      "url": "https://bima.money/",
+      "twitter": "BimaBTC",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "binance-bitcoin": {
+      "url": "https://www.binance.com/en/collateral-btokens",
+      "twitter": "binance",
+      "audits": 0
+    },
+    "binance-staked-eth": {
+      "url": "https://www.binance.com/en/wbeth",
+      "twitter": "binance",
+      "audits": 0
+    },
+    "binance-staked-sol": {
+      "url": "https://www.binance.com/en/solana-staking",
+      "twitter": "binance",
+      "audits": 0
+    },
+    "binaryx-platform": {
+      "url": "https://www.binaryx.com",
+      "twitter": "BinaryxPlatform",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "bingx": {
+      "url": "https://bingx.com",
+      "twitter": "BingXOfficial",
+      "audits": 0
+    },
+    "biquid": {
+      "url": "https://biquid.io",
+      "twitter": "Bifrost_Network",
+      "audits": 0
+    },
+    "bisonfi": {
+      "url": "",
+      "twitter": null,
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "bitfi-basis": {
+      "url": "https://www.bitfi.one",
+      "twitter": "Bitfi_Org",
+      "audits": 0
+    },
+    "bitfinex": {
+      "url": "https://www.bitfinex.com",
+      "twitter": "bitfinex",
+      "audits": 0
+    },
+    "bitget": {
+      "url": "https://www.bitget.com",
+      "twitter": "bitget",
+      "audits": 0
+    },
+    "bitget-bgbtc": {
+      "url": "https://www.bitget.com/",
+      "twitter": "bitget",
+      "audits": 0
+    },
+    "bitget-sol": {
+      "url": "https://www.bitget.com/price/solana/staking",
+      "twitter": "bitget",
+      "audits": 0
+    },
+    "bitlayer-ybtc-family": {
+      "url": "https://www.bitlayer.org/bridge",
+      "twitter": "BitlayerLabs",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "bitlo": {
+      "url": "https://www.bitlo.com/",
+      "twitter": "bitlocom",
+      "audits": 0
+    },
+    "bitrue": {
+      "url": "https://www.bitrue.com",
+      "twitter": "BitrueOfficial",
+      "audits": 0
+    },
+    "bitstamp": {
+      "url": "https://www.bitstamp.net",
+      "twitter": "Bitstamp",
+      "audits": 0
+    },
+    "bittensor-dtao": {
+      "url": "https://bittensor.com",
+      "twitter": "opentensor",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "bitunix": {
+      "url": "https://www.bitunix.com",
+      "twitter": "BitunixOfficial",
+      "audits": 0
+    },
+    "bitvavo": {
+      "url": "https://bitvavo.com/en",
+      "twitter": "bitvavocom",
+      "audits": 0
+    },
+    "bitvenus": {
+      "url": "https://www.bvox.com/",
+      "twitter": "BVOX_global",
+      "audits": 0
+    },
+    "block-analitica": {
+      "url": "https://blockanalitica.com/",
+      "twitter": "BlockAnalitica",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "blofin": {
+      "url": "https://blofin.com",
+      "twitter": "BloFin_Official",
+      "audits": 0
+    },
+    "boros": {
+      "url": "https://boros.pendle.finance/markets",
+      "twitter": "boros_fi",
+      "audits": 0
+    },
+    "bouncebit-prime": {
+      "url": "https://prime.bouncebit.io/",
+      "twitter": "bounce_bit",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "btcfi-cdp": {
+      "url": "https://btcfi.one",
+      "twitter": "Bifrost_Network",
+      "audits": 0
+    },
+    "bucket-cdp": {
+      "url": "https://bucketprotocol.io",
+      "twitter": "bucket_protocol",
+      "audits": 0
+    },
+    "bucket-protocol-v2": {
+      "url": "https://bucketprotocol.io",
+      "twitter": "bucket_protocol",
+      "audits": 0
+    },
+    "bulbaswap-v3": {
+      "url": "https://bulbaswap.io",
+      "twitter": "BulbaSwap",
+      "audits": 0
+    },
+    "bulk": {
+      "url": "https://www.bulk.trade/",
+      "twitter": "bulktrade",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "bybit": {
+      "url": "https://www.bybit.com",
+      "twitter": "Bybit_Official",
+      "audits": 0
+    },
+    "bybit-staked-sol": {
+      "url": "https://www.bybit.com/en/web3/staking/BybitSOL",
+      "twitter": "Bybit_Web3",
+      "audits": 0
+    },
+    "bydfi": {
+      "url": "https://www.bydfi.com/en",
+      "twitter": "BYDFi",
+      "audits": 0
+    },
+    "byreal": {
+      "url": "https://www.byreal.io/",
+      "twitter": "byreal_io",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "byte-exchange": {
+      "url": "https://bexc.io/",
+      "twitter": "ByteExchange",
+      "audits": 0
+    },
+    "catfee-staking-vault": {
+      "url": "https://catfee.io/staking/",
+      "twitter": "CatFeeio",
+      "audits": 0
+    },
+    "ccip": {
+      "url": "https://chain.link/cross-chain",
+      "twitter": "chainlink",
+      "audits": 0
+    },
+    "chain-fusion": {
+      "url": "https://dashboard.internetcomputer.org/chain-fusion",
+      "twitter": "dfinity",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 1,
+      "hack_names": [
+        "Chain Fusion"
+      ]
+    },
+    "chiliz-governance-staking": {
+      "url": "https://governance.chilizchain.com",
+      "twitter": "Chiliz",
+      "audits": 0
+    },
+    "cian-yield-layer": {
+      "url": "https://yieldlayer.cian.app/vaults/0xB13aa2d0345b0439b064f26B82D8dCf3f508775d?chainId=1&utm_source=TPFDZE",
+      "twitter": "CIAN_protocol",
+      "audits": 0
+    },
+    "circle-bitcoin": {
+      "url": "https://www.circle.com/cirbtc",
+      "twitter": "circle",
+      "audits": 0
+    },
+    "circle-gateway": {
+      "url": "https://www.circle.com/gateway",
+      "twitter": "circle",
+      "audits": 0
+    },
+    "citrea-bridge": {
+      "url": "https://citrea.xyz/bridge",
+      "twitter": "citrea_xyz",
+      "audits": 0
+    },
+    "clearstar": {
+      "url": "https://clearstar.xyz",
+      "twitter": "ClearstarLabs",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "coin8": {
+      "url": "",
+      "twitter": "Coin8_Exchange",
+      "audits": 0
+    },
+    "coinbase-bridge": {
+      "url": "https://help.coinbase.com/en/exchange/crypto-transfers/wrapped-assets",
+      "twitter": "coinbase",
+      "audits": 0
+    },
+    "coinbase-wrapped-staked-eth": {
+      "url": "https://www.coinbase.com/price/coinbase-wrapped-staked-eth",
+      "twitter": "coinbase",
+      "audits": 0
+    },
+    "coindcx": {
+      "url": "https://coindcx.com",
+      "twitter": "CoinDCX",
+      "audits": 0
+    },
+    "coinstore": {
+      "url": "https://www.coinstore.com/",
+      "twitter": "CoinstoreExc",
+      "audits": 0
+    },
+    "communityv3": {
+      "url": "",
+      "twitter": null,
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "crypto-com": {
+      "url": "https://crypto.com",
+      "twitter": "cryptocom",
+      "audits": 0
+    },
+    "crypto.com-liquid-staking": {
+      "url": "https://crypto.com/staking",
+      "twitter": "cryptocom",
+      "audits": 0
+    },
+    "current": {
+      "url": "https://www.current.finance/",
+      "twitter": "CurrentSUI",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "curvance": {
+      "url": "https://app.curvance.com",
+      "twitter": "Curvance",
+      "audits": 2,
+      "audit_links": 2,
+      "hacks": 0
+    },
+    "d2-finance": {
+      "url": "https://d2.finance/strategies",
+      "twitter": "D2_Finance",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "damm-capital": {
+      "url": "https://dammcap.finance/",
+      "twitter": "DAMM_Capital",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "decibel": {
+      "url": "https://app.decibel.trade/trade",
+      "twitter": "DecibelTrade",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "defa-by-invoicemate": {
+      "url": "https://imdefa.com/",
+      "twitter": "defaprimitive",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "defi-saver-asset-management": {
+      "url": "https://defisaver.com/",
+      "twitter": "DefiSaver",
+      "audits": 0
+    },
+    "defindex": {
+      "url": "https://www.defindex.io/",
+      "twitter": "defindex_",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "definity-staked-sol": {
+      "url": "https://www.definity.finance/",
+      "twitter": "RealDefinity",
+      "audits": 0
+    },
+    "deribit": {
+      "url": "https://www.deribit.com",
+      "twitter": "DeribitExchange",
+      "audits": 0
+    },
+    "dfdv-staked-sol": {
+      "url": "https://defidevcorp.com/?tab=dfdvSOLcom",
+      "twitter": "defidevcorp",
+      "audits": 0
+    },
+    "doppler-finance": {
+      "url": "https://app.doppler.finance",
+      "twitter": "doppler_fi",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "echo-bridge": {
+      "url": "https://www.echo-protocol.xyz",
+      "twitter": "EchoProtocol_",
+      "audits": 0
+    },
+    "ember": {
+      "url": "https://ember.so/",
+      "twitter": "EmberProtocol",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "endur": {
+      "url": "https://app.endur.fi/",
+      "twitter": "endurfi",
+      "audits": 0
+    },
+    "endurance-bridge": {
+      "url": "https://endurance-bridge.fusionist.io/",
+      "twitter": "fusionistio",
+      "audits": 0
+    },
+    "estate-protocol": {
+      "url": "",
+      "twitter": "EstateProtocol",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "exinpool": {
+      "url": "",
+      "twitter": null,
+      "audits": 0
+    },
+    "exponent-risk-tranching": {
+      "url": "https://www.exponent.finance/",
+      "twitter": "ExponentFinance",
+      "audits": 0
+    },
+    "exponent-strategy-vaults": {
+      "url": "https://www.exponent.finance/",
+      "twitter": "ExponentFinance",
+      "audits": 0
+    },
+    "exponent-yield-exchange": {
+      "url": "https://www.exponent.finance/",
+      "twitter": "ExponentFinance",
+      "audits": 0
+    },
+    "exsat-staking-btc": {
+      "url": "https://exsat.network/app/bridge",
+      "twitter": "exSatNetwork",
+      "audits": 0
+    },
+    "extended-perps": {
+      "url": "https://app.extended.exchange",
+      "twitter": "extendedapp",
+      "audits": 0
+    },
+    "fassets": {
+      "url": "https://fassets.au.cc/",
+      "twitter": "FlareNetworks",
+      "audits": 0
+    },
+    "felix-cdp": {
+      "url": "https://www.usefelix.xyz?ref=4BF702FF",
+      "twitter": "felixprotocol",
+      "audits": 0
+    },
+    "felix-vaults": {
+      "url": "https://www.usefelix.xyz?ref=4BF702FF",
+      "twitter": "felixprotocol",
+      "audits": 0
+    },
+    "figure-markets-exchange": {
+      "url": "https://www.figuremarkets.com/crypto-exchange/",
+      "twitter": "figuremarkets",
+      "audits": 0
+    },
+    "figure-markets-prime": {
+      "url": "https://www.figure.com/crypto-backed-loan/",
+      "twitter": "figuremarkets",
+      "audits": 0
+    },
+    "fira": {
+      "url": "https://www.fira.money/",
+      "twitter": "Fira_Lend",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "firelight": {
+      "url": "https://firelight.finance/",
+      "twitter": "Firelightfi",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "flowdesk": {
+      "url": "https://www.flowdesk.co/",
+      "twitter": "flowdesk_co",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "flux-finance": {
+      "url": "https://fluxfinance.com",
+      "twitter": "FluxDeFi",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "fluxion-network": {
+      "url": "https://app.fluxion.network/",
+      "twitter": "Fluxion_dex",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "flying-tulip-ftusd": {
+      "url": "https://flyingtulip.com/",
+      "twitter": "flyingtulip_",
+      "audits": 0
+    },
+    "forward-industries-sol": {
+      "url": "https://www.forwardindustries.com/",
+      "twitter": "FWDind",
+      "audits": 0
+    },
+    "fstswap": {
+      "url": "",
+      "twitter": "FstSwapbright",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "function-fbtc": {
+      "url": "https://www.fxn.xyz",
+      "twitter": "FunctionBTC",
+      "audits": 0
+    },
+    "galaxy-curation": {
+      "url": "https://www.galaxy.com/",
+      "twitter": "galaxyhq",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "gami-labs": {
+      "url": "https://gamilabs.io/",
+      "twitter": "GamiLabs",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "gamma-research": {
+      "url": "https://gammaresearch.xyz/",
+      "twitter": "Gamma_Research_",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "gate-sol": {
+      "url": "https://app.sanctum.so/explore/gtSOL",
+      "twitter": "sanctumso",
+      "audits": 0
+    },
+    "gauntlet": {
+      "url": "https://www.gauntlet.xyz",
+      "twitter": "gauntlet_xyz",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "gemini": {
+      "url": "https://www.gemini.com",
+      "twitter": "Gemini",
+      "audits": 0
+    },
+    "gmx-solana": {
+      "url": "https://gmtrade.xyz",
+      "twitter": "gmtrade_xyz",
+      "audits": 0
+    },
+    "goonfi": {
+      "url": "",
+      "twitter": null,
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 1,
+      "hack_names": [
+        "GoonFi"
+      ]
+    },
+    "goose": {
+      "url": "",
+      "twitter": "GoldenGoose_app",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "granite": {
+      "url": "",
+      "twitter": "GraniteBTC",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "growihf": {
+      "url": "https://hf.growi.fi/",
+      "twitter": "GrowiFinance",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "gtbtc": {
+      "url": "https://www.gate.com/staking/BTC",
+      "twitter": "Gate",
+      "audits": 0
+    },
+    "hakutora": {
+      "url": "https://hakutora.xyz",
+      "twitter": "0xhakutora",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "hashkey-exchange": {
+      "url": "https://www.hashkey.com",
+      "twitter": "HashKeyExchange",
+      "audits": 0
+    },
+    "hashkey-global": {
+      "url": "https://www.hashkey.com",
+      "twitter": "HashKeyExchange",
+      "audits": 0
+    },
+    "helius-staked-sol": {
+      "url": "https://www.helius.dev",
+      "twitter": "heliuslabs",
+      "audits": 0
+    },
+    "hertzflow": {
+      "url": "https://www.hertzflow.xyz/",
+      "twitter": "Hertzflow_xyz",
+      "audits": 2,
+      "audit_links": 2,
+      "hacks": 0
+    },
+    "hibt": {
+      "url": "https://hibt.com",
+      "twitter": "HIBTGlobal",
+      "audits": 0
+    },
+    "hive-protocol": {
+      "url": "https://hive.bsquared.network/",
+      "twitter": "BsquaredNetwork",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "hotcoin": {
+      "url": "https://www.hotcoin.com/",
+      "twitter": "HotcoinGlobal",
+      "audits": 0
+    },
+    "htx": {
+      "url": "https://www.htx.com/",
+      "twitter": "HuobiGlobal",
+      "audits": 0
+    },
+    "hubra-staked-sol": {
+      "url": "https://www.hubra.app",
+      "twitter": "SolanaHubApp",
+      "audits": 0
+    },
+    "hylo-lsts": {
+      "url": "https://hylo.so/leverage",
+      "twitter": "hylo_so",
+      "audits": 0
+    },
+    "hylo-protocol": {
+      "url": "https://hylo.so",
+      "twitter": "hylo_so",
+      "audits": 0
+    },
+    "hyperbeat-earn": {
+      "url": "https://app.hyperbeat.org",
+      "twitter": "0xhyperbeat",
+      "audits": 0
+    },
+    "hyperbeat-lst": {
+      "url": "https://app.hyperbeat.org/staking",
+      "twitter": "0xhyperbeat",
+      "audits": 0
+    },
+    "hyperithm": {
+      "url": "https://www.hyperithm.com",
+      "twitter": "hyperithm",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "icarus-cl": {
+      "url": "https://icarus.finance",
+      "twitter": "Icarus_Fi",
+      "audits": 0
+    },
+    "inceptionlrt-(isolated-restaking)": {
+      "url": "",
+      "twitter": "InceptionLRT",
+      "audits": 0
+    },
+    "indodax": {
+      "url": "https://indodax.com/",
+      "twitter": "indodax",
+      "audits": 0
+    },
+    "infinifi": {
+      "url": "https://infinifi.xyz",
+      "twitter": "infiniFi",
+      "audits": 3,
+      "audit_links": 3,
+      "hacks": 0
+    },
+    "ink-bridge": {
+      "url": "https://inkonchain.com/bridge",
+      "twitter": "inkonchain",
+      "audits": 0
+    },
+    "ipor-fusion": {
+      "url": "https://app.ipor.io/fusion",
+      "twitter": "ipor_io",
+      "audits": 0
+    },
+    "jagpool-staked-sol": {
+      "url": "https://www.jagpool.xyz/",
+      "twitter": "JagPool_xyz",
+      "audits": 0
+    },
+    "japan-staked-sol": {
+      "url": "https://japansol.com/",
+      "twitter": null,
+      "audits": 0
+    },
+    "jpool": {
+      "url": "https://app.jpool.one",
+      "twitter": "JPoolSolana",
+      "audits": 0
+    },
+    "k3-capital": {
+      "url": "https://k3.capital",
+      "twitter": "k3_capital",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "katana-dex": {
+      "url": "https://app.roninchain.com/swap#/swap",
+      "twitter": "AxieInfinity",
+      "audits": 0
+    },
+    "katana-pre-launch": {
+      "url": "https://app.katana.network/",
+      "twitter": "katana",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "kava-mint": {
+      "url": "https://www.kava.io/",
+      "twitter": "KAVA_CHAIN",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "keyrock": {
+      "url": "https://keyrock.com/",
+      "twitter": "keyrock",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "korbit": {
+      "url": "https://korbit.co.kr",
+      "twitter": "Korbit_exchange",
+      "audits": 0
+    },
+    "kraken-bitcoin": {
+      "url": "https://www.kraken.com/kbtc",
+      "twitter": "krakenfx",
+      "audits": 0
+    },
+    "kton": {
+      "url": "https://app.kton.io",
+      "twitter": "kton_io",
+      "audits": 0
+    },
+    "kucoin": {
+      "url": "https://www.kucoin.com",
+      "twitter": "kucoincom",
+      "audits": 0
+    },
+    "lagoon": {
+      "url": "https://lagoon.finance",
+      "twitter": "lagoon_finance",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "lbank": {
+      "url": "https://www.lbank.com",
+      "twitter": "LBank_Exchange",
+      "audits": 0
+    },
+    "levex": {
+      "url": "https://levex.com/en/assets/proof-of-reserve",
+      "twitter": "LeveX",
+      "audits": 0
+    },
+    "lightning-network": {
+      "url": "https://lightning.network/",
+      "twitter": null,
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "liminal-basis": {
+      "url": "https://liminal.money",
+      "twitter": "liminalmoney",
+      "audits": 0
+    },
+    "linea-bridge": {
+      "url": "https://bridge.linea.build",
+      "twitter": "LineaBuild",
+      "audits": 0
+    },
+    "liquid-collective": {
+      "url": "https://liquidcollective.io",
+      "twitter": "liquid_col",
+      "audits": 0
+    },
+    "lofty": {
+      "url": "https://www.lofty.ai",
+      "twitter": "lofty_ai",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "loopscale-curation": {
+      "url": "https://loop.sl",
+      "twitter": "Loopscale",
+      "audits": 0
+    },
+    "loopscale-lending": {
+      "url": "https://loop.sl",
+      "twitter": "Loopscale",
+      "audits": 0
+    },
+    "lulo": {
+      "url": "https://lulo.fi/",
+      "twitter": "uselulo",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "makina": {
+      "url": "https://app.makina.finance/",
+      "twitter": "makinafi",
+      "audits": 2,
+      "audit_links": 2,
+      "hacks": 1,
+      "hack_names": [
+        "Makina"
+      ]
+    },
+    "manifest-trade": {
+      "url": "https://manifest.trade/",
+      "twitter": "ManifestTrade",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "manta-cedefi": {
+      "url": "https://cedefi.manta.network",
+      "twitter": "MantaNetwork",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "mantle-restaking": {
+      "url": "https://www.methprotocol.xyz/",
+      "twitter": "mETHProtocol",
+      "audits": 0
+    },
+    "marginfi-lending": {
+      "url": "",
+      "twitter": "marginfi",
+      "audits": 0
+    },
+    "marginfi-lst": {
+      "url": "",
+      "twitter": "marginfi",
+      "audits": 0
+    },
+    "mellow-core": {
+      "url": "https://app.mellow.finance/vaults",
+      "twitter": "mellowprotocol",
+      "audits": 0
+    },
+    "mellow-restaking": {
+      "url": "https://mellow.finance/",
+      "twitter": "mellowprotocol",
+      "audits": 0
+    },
+    "metalx-swap": {
+      "url": "https://app.metalx.com/swap",
+      "twitter": "MetalXApp",
+      "audits": 0
+    },
+    "metric-v1": {
+      "url": "https://www.metric.xyz/",
+      "twitter": "Metricxyz",
+      "audits": 0
+    },
+    "mev-capital": {
+      "url": "",
+      "twitter": "MEVCapital",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "mezo-earn": {
+      "url": "https://mezo.org/earn/lock",
+      "twitter": "MezoNetwork",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "mezzanine": {
+      "url": "https://mezz.finance/",
+      "twitter": "mezzanine_fi",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "monarq": {
+      "url": "https://www.monarq-am.com/",
+      "twitter": "monarq_mgmt",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "monolith-market": {
+      "url": "https://monolith.market",
+      "twitter": "MonolithMarket",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "morph-bridge": {
+      "url": "https://bridge.morphl2.io/",
+      "twitter": "Morphl2",
+      "audits": 0
+    },
+    "mystic-finance-lending": {
+      "url": "https://www.mysticfinance.xyz/",
+      "twitter": "mystic_finance",
+      "audits": 0
+    },
+    "nado-spot": {
+      "url": "https://app.nado.xyz?join=sP6or8A",
+      "twitter": "nadohq",
+      "audits": 0
+    },
+    "native-credit-pool": {
+      "url": "https://native.org",
+      "twitter": "native_fi",
+      "audits": 0
+    },
+    "nbx": {
+      "url": "https://nbx.com",
+      "twitter": "nbxcom",
+      "audits": 0
+    },
+    "nemo-trading": {
+      "url": "https://nemo.trading/",
+      "twitter": "NEMOtradingHQ",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "neutral-trade": {
+      "url": "https://www.neutral.trade/",
+      "twitter": "TradeNeutral",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "nexus-btc": {
+      "url": "https://www.bit.com/",
+      "twitter": "Matrixport_EN",
+      "audits": 0
+    },
+    "niza": {
+      "url": "",
+      "twitter": "nizacoin",
+      "audits": 0
+    },
+    "noble": {
+      "url": "https://www.noble.xyz",
+      "twitter": "noble_xyz",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "nodedao": {
+      "url": "https://www.nodedao.com",
+      "twitter": "Node_DAO",
+      "audits": 0
+    },
+    "nonce-capital": {
+      "url": "https://nonce-capital.xyz/",
+      "twitter": "noncecap",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "noon": {
+      "url": "https://app.noon.capital",
+      "twitter": "noon_capital",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "nucleus": {
+      "url": "",
+      "twitter": "nucleusearn",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "nuva": {
+      "url": "https://nuva.finance",
+      "twitter": "nuvafinance",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "obeliskbtc": {
+      "url": "https://obelisk.nodedao.com",
+      "twitter": "Oblisk_NodeDAO",
+      "audits": 0
+    },
+    "okcoin": {
+      "url": "https://www.okcoin.com",
+      "twitter": "Okcoin",
+      "audits": 0
+    },
+    "okx-xbtc": {
+      "url": "https://www.okx.com/xbtc#transparency",
+      "twitter": "okx",
+      "audits": 0
+    },
+    "onre": {
+      "url": "https://app.onre.finance",
+      "twitter": "onrefinance",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "opentrade": {
+      "url": "https://www.opentrade.io",
+      "twitter": "opentrade_io",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "orangex": {
+      "url": "https://www.orangex.com",
+      "twitter": "OrangeXExchange",
+      "audits": 0
+    },
+    "origami-finance": {
+      "url": "",
+      "twitter": "origami_fi",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "osl-exchange": {
+      "url": "https://www.osl.com/en",
+      "twitter": "OSL_HK",
+      "audits": 0
+    },
+    "ourbit": {
+      "url": "https://www.ourbit.com",
+      "twitter": "Ourbit_Official",
+      "audits": 0
+    },
+    "pacifica-bridge": {
+      "url": "https://app.pacifica.fi",
+      "twitter": "pacifica_fi",
+      "audits": 0
+    },
+    "paimon": {
+      "url": "https://paimon.finance/",
+      "twitter": "Paimon_Finance",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "pangolins": {
+      "url": "https://pangolins.io/",
+      "twitter": "PangolinsVault",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "perena-vaults": {
+      "url": "https://app.perena.org/?ref=ILPYAL",
+      "twitter": "perena",
+      "audits": 0
+    },
+    "phantom-sol": {
+      "url": "https://phantom.com/",
+      "twitter": "phantom",
+      "audits": 0
+    },
+    "phase-delegation": {
+      "url": "",
+      "twitter": "phase_",
+      "audits": 0
+    },
+    "phoenix-perp": {
+      "url": "https://phoenix.trade",
+      "twitter": "PhoenixTrade",
+      "audits": 0
+    },
+    "pionex": {
+      "url": "https://www.pionex.com/en",
+      "twitter": "pionex",
+      "audits": 0
+    },
+    "plasma-one": {
+      "url": "https://www.plasma.to/one",
+      "twitter": "Plasma",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "plasma-saving-vaults": {
+      "url": "https://app.plasma.to/",
+      "twitter": "Plasma",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "plume-vaults": {
+      "url": "https://app.plume.org/vaults",
+      "twitter": "plumenetwork",
+      "audits": 2,
+      "audit_links": 2,
+      "hacks": 0
+    },
+    "poloniex": {
+      "url": "https://www.poloniex.com/",
+      "twitter": "Poloniex",
+      "audits": 0
+    },
+    "polygon-zkevm-bridge": {
+      "url": "https://portal.polygon.technology/bridge",
+      "twitter": "0xPolygon",
+      "audits": 0
+    },
+    "polymarket-international": {
+      "url": "https://polymarket.com",
+      "twitter": "Polymarket",
+      "audits": 0
+    },
+    "popdex-bridge": {
+      "url": "https://popdex.xyz/",
+      "twitter": "popdex_",
+      "audits": 0
+    },
+    "potatoswap-v2": {
+      "url": "https://potatoswap.finance",
+      "twitter": "PotatoSwap_Fi",
+      "audits": 0
+    },
+    "predict-fun": {
+      "url": "https://predict.fun",
+      "twitter": "predictdotfun",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 1,
+      "hack_names": [
+        "Predict Fun"
+      ]
+    },
+    "prime-staking": {
+      "url": "https://primestaking.xyz/",
+      "twitter": "PrimeNumbersFi",
+      "audits": 0
+    },
+    "privacy-pools-v1": {
+      "url": "https://privacypools.com/",
+      "twitter": "0xbowio",
+      "audits": 0
+    },
+    "project-0": {
+      "url": "https://app.0.xyz",
+      "twitter": "project0",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "project-x": {
+      "url": "https://www.prjx.com",
+      "twitter": "prjx_hl",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "pulsechain-bridge": {
+      "url": "https://bridge.pulsechain.com",
+      "twitter": "PulsechainCom",
+      "audits": 0
+    },
+    "qearn": {
+      "url": "https://www.qearn.org/home",
+      "twitter": "_Qubic_",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "r25": {
+      "url": "https://www.r25.xyz/",
+      "twitter": "R25Official",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "raiku-staked-sol": {
+      "url": "https://stake.raiku.com",
+      "twitter": "Raikucom",
+      "audits": 0
+    },
+    "re7-labs": {
+      "url": "https://www.re7labs.xyz",
+      "twitter": "Re7Labs",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "reti-pooling": {
+      "url": "https://reti.nodely.io/",
+      "twitter": "txnlab",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "reya-perps": {
+      "url": "https://app.reya.xyz",
+      "twitter": "reya_xyz",
+      "audits": 0
+    },
+    "rhea-lst": {
+      "url": "https://www.rhea.finance/",
+      "twitter": "rhea_finance",
+      "audits": 0
+    },
+    "rif-on-chain": {
+      "url": "https://rifonchain.com/",
+      "twitter": "rocprotocol",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "ring-few": {
+      "url": "https://ring.exchange/#/earn",
+      "twitter": "ProtocolRing",
+      "audits": 0
+    },
+    "risex": {
+      "url": "https://www.rise.trade/en",
+      "twitter": "risextrade",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 1,
+      "hack_names": [
+        "RISEx"
+      ]
+    },
+    "robinhood": {
+      "url": "https://robinhood.com",
+      "twitter": "RobinhoodApp",
+      "audits": 0
+    },
+    "robinhood-chain-bridge": {
+      "url": "https://robinhood.com/us/en/chain/",
+      "twitter": "RobinhoodCrypto",
+      "audits": 0
+    },
+    "rockawayx": {
+      "url": "https://rockawayx.com/",
+      "twitter": "Rockaway_X",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "rocketswap-anubis-v2": {
+      "url": "",
+      "twitter": "Rocket_Swap_",
+      "audits": 0
+    },
+    "rocksolid-network": {
+      "url": "https://rocksolid.network/",
+      "twitter": "rocksolidhq",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "royco-v2": {
+      "url": "https://www.royco.org",
+      "twitter": "roycoprotocol",
+      "audits": 0
+    },
+    "rsk-bridge": {
+      "url": "https://rootstock.io/",
+      "twitter": "rootstock_io",
+      "audits": 0
+    },
+    "rysk-v12": {
+      "url": "https://app.rysk.finance",
+      "twitter": "ryskfinance",
+      "audits": 0
+    },
+    "saturn": {
+      "url": "https://app.saturn.credit/",
+      "twitter": "saturn_credit",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "sceptre-liquid": {
+      "url": "",
+      "twitter": "SceptreLS",
+      "audits": 0
+    },
+    "scroll-bridge": {
+      "url": "https://portal.scroll.io/bridge",
+      "twitter": "Scroll_ZKP",
+      "audits": 0
+    },
+    "sentora-curator": {
+      "url": "https://sentora.com/",
+      "twitter": "SentoraHQ",
+      "audits": 0
+    },
+    "set-protocol": {
+      "url": "",
+      "twitter": "SetProtocol",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 2,
+      "hack_names": [
+        "Set Protocol",
+        "Set Protocol"
+      ]
+    },
+    "sharpbyte-capital": {
+      "url": "https://www.sharpbyte.xyz/",
+      "twitter": "sharpbytexyz",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "shift-defi": {
+      "url": "https://shiftdefi.com/",
+      "twitter": "Shift_DeFi",
+      "audits": 4,
+      "audit_links": 4,
+      "hacks": 0
+    },
+    "shmonad": {
+      "url": "https://shmonad.xyz/",
+      "twitter": "0xFastLane",
+      "audits": 0
+    },
+    "snuggle": {
+      "url": "https://snuggle.fi/",
+      "twitter": "SnuggleFi",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "solv-strategies": {
+      "url": "https://solv.finance",
+      "twitter": "SolvProtocol",
+      "audits": 0
+    },
+    "solvbtc-lsts": {
+      "url": "https://solv.finance",
+      "twitter": "SolvProtocol",
+      "audits": 0
+    },
+    "sonic-gateway": {
+      "url": "https://gateway.soniclabs.com/ethereum/sonic/s",
+      "twitter": "SonicLabs",
+      "audits": 0
+    },
+    "sophon-bridge": {
+      "url": "",
+      "twitter": "sophon",
+      "audits": 0
+    },
+    "springsui": {
+      "url": "https://springsui.com/",
+      "twitter": "springsui_",
+      "audits": 0
+    },
+    "stablehodl": {
+      "url": "https://stablehodl.com/",
+      "twitter": "StableHodl",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "stackingdao": {
+      "url": "https://app.stackingdao.com",
+      "twitter": "StackingDao",
+      "audits": 0
+    },
+    "stacks-sbtc": {
+      "url": "https://docs.stacks.co/more-guides/sbtc",
+      "twitter": "Stacks",
+      "audits": 0
+    },
+    "stakee": {
+      "url": "https://stakee.org",
+      "twitter": null,
+      "audits": 0
+    },
+    "starknet-btc-staking": {
+      "url": "https://www.starknet.io/staking/bitcoin-staking-user-guide-for-starknet/",
+      "twitter": "Starknet",
+      "audits": 0
+    },
+    "steakhouse-financial": {
+      "url": "https://www.steakhouse.financial/",
+      "twitter": "SteakhouseFi",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "steer-protocol": {
+      "url": "https://app.steer.finance",
+      "twitter": "steerprotocol",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "stellar-amm": {
+      "url": "https://developers.stellar.org/docs/learn/fundamentals/liquidity-on-stellar-sdex-liquidity-pools#automated-market-makers-amms",
+      "twitter": "StellarOrg",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "stellar-defi-hub": {
+      "url": "https://stellardefihub.com/",
+      "twitter": "stellardefihub",
+      "audits": 0
+    },
+    "stellar-dex": {
+      "url": "https://developers.stellar.org/docs/learn/fundamentals/liquidity-on-stellar-sdex-liquidity-pools",
+      "twitter": "StellarOrg",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "sthype": {
+      "url": "https://app.valantis.xyz",
+      "twitter": "stakedhype",
+      "audits": 0
+    },
+    "stkesol-by-sol-strategies": {
+      "url": "https://app.solstrategies.io",
+      "twitter": "solstrategies",
+      "audits": 0
+    },
+    "strata-markets": {
+      "url": "https://strata.markets",
+      "twitter": "strata_markets",
+      "audits": 0
+    },
+    "strato-cdp": {
+      "url": "https://app.strato.nexus/",
+      "twitter": "strato_net",
+      "audits": 0
+    },
+    "subfrost": {
+      "url": "https://app.subfrost.io/",
+      "twitter": "subfrostp2p",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "suibridge": {
+      "url": "https://bridge.sui.io",
+      "twitter": "SuiNetwork",
+      "audits": 0
+    },
+    "superearn": {
+      "url": "https://superearn.io/",
+      "twitter": "SuperEarnX",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "swan-dao": {
+      "url": "https://www.swanusd.com/",
+      "twitter": "MonolithMarket",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "sx-rollup-bridge": {
+      "url": "https://sx.bet/wallet/bridge",
+      "twitter": "SX_Network",
+      "audits": 0
+    },
+    "sygnum-fiusd-liquidity-fund": {
+      "url": "https://www.sygnum.com/",
+      "twitter": "sygnumofficial",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "symbiotic": {
+      "url": "https://symbiotic.fi",
+      "twitter": "symbioticfi",
+      "audits": 4,
+      "audit_links": 4,
+      "hacks": 0
+    },
+    "syncswap": {
+      "url": "https://syncswap.xyz/",
+      "twitter": "syncswap",
+      "audits": 0
+    },
+    "syntetika": {
+      "url": "https://syntetika.io/",
+      "twitter": "Syntetika",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "syntropia": {
+      "url": "https://syntropia.ai/",
+      "twitter": "syntropia_ai",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "t3tris-finance": {
+      "url": "https://t3tris.finance/",
+      "twitter": "0xT3tris",
+      "audits": 3,
+      "audit_links": 3,
+      "hacks": 0
+    },
+    "tau-labs": {
+      "url": "https://www.628labs.xyz/",
+      "twitter": "628Labs",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "templar-lending": {
+      "url": "https://www.templarfi.org/",
+      "twitter": "TemplarProtocol",
+      "audits": 0
+    },
+    "temple": {
+      "url": "https://templedigitalgroup.com/",
+      "twitter": "temple_ny",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "tempo-stablecoin-dex": {
+      "url": "https://tempo.xyz/",
+      "twitter": "tempo",
+      "audits": 0
+    },
+    "tessera-v": {
+      "url": "",
+      "twitter": null,
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "theo-network-thbill": {
+      "url": "https://app.theo.xyz/",
+      "twitter": "Theo_Network",
+      "audits": 0
+    },
+    "theo-network-thusd": {
+      "url": "https://app.theo.xyz/",
+      "twitter": "Theo_Network",
+      "audits": 0
+    },
+    "tonstakers-lsd": {
+      "url": "https://tonstakers.com",
+      "twitter": "tonstakers",
+      "audits": 0
+    },
+    "toobit": {
+      "url": "https://www.toobit.com",
+      "twitter": "Toobit_official",
+      "audits": 0
+    },
+    "tori-finance": {
+      "url": "https://tori.finance/",
+      "twitter": "tori_finance",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "tulipa-capital": {
+      "url": "https://www.tulipa.capital",
+      "twitter": "tulipacapital",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "turboflow-perps": {
+      "url": "https://www.tf.xyz/",
+      "twitter": "TurboFlow_xyz",
+      "audits": 0
+    },
+    "txflow-bridge": {
+      "url": "https://txflow.com/",
+      "twitter": "TxFlow_L1",
+      "audits": 0
+    },
+    "tydro": {
+      "url": "https://tydro.com/",
+      "twitter": "tydrohq",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "tzbtc": {
+      "url": "https://tzbtc.io/transparency",
+      "twitter": "tzBTC_io",
+      "audits": 0
+    },
+    "ultrayield-curator": {
+      "url": "https://ultrayield.app/",
+      "twitter": "ultrayieldapp",
+      "audits": 0
+    },
+    "ultrayield-vaults": {
+      "url": "https://ultrayield.app/",
+      "twitter": "ultrayieldapp",
+      "audits": 0
+    },
+    "unit": {
+      "url": "https://hyperunit.xyz/deposit",
+      "twitter": "unitxyz",
+      "audits": 0
+    },
+    "upshift": {
+      "url": "https://app.upshift.finance",
+      "twitter": "upshift_fi",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "usdcx": {
+      "url": "https://www.circle.com/xreserve",
+      "twitter": "circle",
+      "audits": 0
+    },
+    "usdd": {
+      "url": "https://usdd.io/",
+      "twitter": "usddio",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "usdt0": {
+      "url": "https://usdt0.to",
+      "twitter": "USDT0_to",
+      "audits": 0
+    },
+    "valantis-sthype-restaking": {
+      "url": "https://app.valantis.xyz",
+      "twitter": "ValantisLabs",
+      "audits": 0
+    },
+    "valdora-finance": {
+      "url": "https://www.valdora.finance/",
+      "twitter": "Valdora_finance",
+      "audits": 0
+    },
+    "valos": {
+      "url": "https://valos.io/",
+      "twitter": "Valos_io",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "valr": {
+      "url": "https://valr.com/",
+      "twitter": "VALRdotcom",
+      "audits": 0
+    },
+    "vault-street": {
+      "url": "https://www.vaultstreet.com/",
+      "twitter": "Vault_St",
+      "audits": 0
+    },
+    "veda": {
+      "url": "https://veda.tech",
+      "twitter": "veda_labs",
+      "audits": 5,
+      "audit_links": 5,
+      "hacks": 0
+    },
+    "vena-finance": {
+      "url": "https://vena.finance",
+      "twitter": "venafinance",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "vesu": {
+      "url": "https://www.vesu.xyz",
+      "twitter": "vesuxyz",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "vfat.io": {
+      "url": "https://vfat.io/yield",
+      "twitter": "vfat_io",
+      "audits": 0
+    },
+    "vishwa": {
+      "url": "https://www.vishwalab.com/",
+      "twitter": "Vishwa_lab",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "wan-bridge": {
+      "url": "https://bridge.wanchain.org",
+      "twitter": "wanchain_org",
+      "audits": 0
+    },
+    "waterline": {
+      "url": "https://www.waterline.build",
+      "twitter": null,
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "wbtc": {
+      "url": "https://wbtc.network/",
+      "twitter": "WrappedBTC",
+      "audits": 0
+    },
+    "wemix.fi-staking": {
+      "url": "https://wemix.fi",
+      "twitter": "WemixNetwork",
+      "audits": 0
+    },
+    "world-chain-bridge": {
+      "url": "https://world.org/",
+      "twitter": "worldcoin",
+      "audits": 0
+    },
+    "wrapped": {
+      "url": "https://wrapped.com",
+      "twitter": "WrappedFi",
+      "audits": 0
+    },
+    "wtao": {
+      "url": "https://bittensor.com",
+      "twitter": "opentensor",
+      "audits": 0
+    },
+    "xion-finance": {
+      "url": "https://xion.burnt.com",
+      "twitter": "burnt_xion",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "xrpl-dex": {
+      "url": "https://xrpl.org/",
+      "twitter": "RippleXDev",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "y10k-capital": {
+      "url": "https://www.y10k.capital/",
+      "twitter": "y10kcapital",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "yieldfi": {
+      "url": "https://yield.fi/",
+      "twitter": "getyieldfi",
+      "audits": 1,
+      "audit_links": 1,
+      "hacks": 0
+    },
+    "yuzu-money": {
+      "url": "https://app.yuzu.money",
+      "twitter": "YuzuMoneyX",
+      "audits": 3,
+      "audit_links": 3,
+      "hacks": 0
+    },
+    "zircuit-staking": {
+      "url": "https://app.zircuit.com/liquidity-hub",
+      "twitter": "ZircuitL2",
+      "audits": 0
+    },
+    "zksync-era-txbridge": {
+      "url": "",
+      "twitter": "txSync_io",
+      "audits": 0
+    },
+    "zoo-finance": {
+      "url": "https://zoofi.io",
+      "twitter": "ZooFinanceIO",
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    },
+    "zoomex": {
+      "url": "https://www.zoomex.com",
+      "twitter": "ZoomexOfficial",
+      "audits": 0
+    },
+    "drakewell": {
+      "url": null,
+      "twitter": null,
+      "audits": 0,
+      "audit_links": 0,
+      "hacks": 0
+    }
+  },
+  "stable": {
+    "aegis-yusd": {
+      "symbol": "YUSD",
+      "name": "Aegis YUSD",
+      "gecko_id": "aegis-yusd",
+      "circulating_usd": 34485618,
+      "peg": "peggedUSD"
+    },
+    "usdd": {
+      "symbol": "USDD",
+      "name": "USDD",
+      "gecko_id": "usdd",
+      "circulating_usd": 1407090367,
+      "peg": "peggedUSD"
+    }
+  },
+  "market": {
+    "axis": {
+      "chain": "ethereum",
+      "dex": "uniswap",
+      "symbol": "AXIS",
+      "name": "Axis Robotics",
+      "liquidity_usd": 99481486,
+      "address": "0x23DC9375389ccd1D1Cc64D67c11dA582676eFFe3",
+      "pair_address": "0xAC2dbF83CB27739CBBDc964202C0840b73c26BC9",
+      "url": "https://dexscreener.com/ethereum/0xac2dbf83cb27739cbbdc964202c0840b73c26bc9"
+    },
+    "coinbase-wrapped-staked-eth": {
+      "chain": "base",
+      "dex": "aero",
+      "symbol": "cbETH",
+      "name": "Coinbase Wrapped Staked ETH",
+      "liquidity_usd": 1759202,
+      "address": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
+      "pair_address": "0x03bf20662F76312aEc31EF28d4a024E1ECa108Af",
+      "url": "https://dexscreener.com/base/0x03bf20662f76312aec31ef28d4a024e1eca108af"
+    },
+    "doppler-finance": {
+      "chain": "ethereum",
+      "dex": "uniswap",
+      "symbol": "XDP",
+      "name": "Doppler Finance",
+      "liquidity_usd": 64999761,
+      "address": "0x60FF2e74611844702a2538F0739Ca26AF3366FC0",
+      "pair_address": "0xd9A18e515ACdCb6d30596c05240f02959FE9499b",
+      "url": "https://dexscreener.com/ethereum/0xd9a18e515acdcb6d30596c05240f02959fe9499b"
+    },
+    "helius-staked-sol": {
+      "chain": "solana",
+      "dex": "raydium",
+      "symbol": "hSOL",
+      "name": "Helius Staked SOL",
+      "liquidity_usd": 455897,
+      "address": "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A",
+      "pair_address": "9m6cYJ8dd26Smzh35qDvFjkyqvMWYw1CwG5R5F7xWg9Q",
+      "url": "https://dexscreener.com/solana/9m6cyj8dd26smzh35qdvfjkyqvmwyw1cwg5r5f7xwg9q"
+    },
+    "htx": {
+      "chain": "tron",
+      "dex": "sunswap",
+      "symbol": "HTX",
+      "name": "HTX",
+      "liquidity_usd": 63575662,
+      "address": "TUPM7K8REVzD2UdV4R5fe5M8XbnR2DdoJ6",
+      "pair_address": "TRaQussyGeM6rhRGM3wfEj3B8vofTJj3EB",
+      "url": "https://dexscreener.com/tron/traqussygem6rhrgm3wfej3b8voftjj3eb"
+    },
+    "infinifi": {
+      "chain": "base",
+      "dex": "uniswap",
+      "symbol": "INFI",
+      "name": "InfiniFi",
+      "liquidity_usd": 103841,
+      "address": "0x76675B96ab5403B52d41CBb54f846615Cc265F03",
+      "pair_address": "0xb9ec360dd38364fdafd0b4ab6998e198cfd48c9bf59782e165866df88062f694",
+      "url": "https://dexscreener.com/base/0xb9ec360dd38364fdafd0b4ab6998e198cfd48c9bf59782e165866df88062f694"
+    },
+    "robinhood": {
+      "chain": "bsc",
+      "dex": "pancakeswap",
+      "symbol": "HOODB",
+      "name": "Robinhood",
+      "liquidity_usd": 136608,
+      "address": "0xA394dCEa3fd3847fD793afBFd163E2e3858B7c65",
+      "pair_address": "0xFEeF70FF6F58f0A900e28A77e5A8945aFB343923",
+      "url": "https://dexscreener.com/bsc/0xfeef70ff6f58f0a900e28a77e5a8945afb343923"
+    },
+    "sthype": {
+      "chain": "hyperevm",
+      "dex": "hyperswap",
+      "symbol": "stHYPE",
+      "name": "Staked HYPE",
+      "liquidity_usd": 164055,
+      "address": "0xfFaa4a3D97fE9107Cef8a3F48c069F577Ff76cC1",
+      "pair_address": "0x8D64d8273a3D50E44Cc0e6F43d927f78754EdefB",
+      "url": "https://dexscreener.com/hyperevm/0x8d64d8273a3d50e44cc0e6f43d927f78754edefb"
+    },
+    "symbiotic": {
+      "chain": "base",
+      "dex": "sushiswap",
+      "symbol": "SYBT",
+      "name": "Symbiotic",
+      "liquidity_usd": 144966,
+      "address": "0xD7C1d5b2BDF5D673C7757B2c61b427dE3D2843C2",
+      "pair_address": "0x2F58679116FFb64A755EB3615804b44c0D9b092e",
+      "url": "https://dexscreener.com/base/0x2f58679116ffb64a755eb3615804b44c0d9b092e"
+    },
+    "usdcx": {
+      "chain": "cardano",
+      "dex": "sundaeswap",
+      "symbol": "USDCx",
+      "name": "USDCx",
+      "liquidity_usd": 610864,
+      "address": "1f3aec8bfe7ea4fe14c5f121e2a92e301afe414147860d557cac7e345553444378",
+      "pair_address": "bdf5e1ccc9aea3c8d587cc6b6fb74ea531538e96ab8cb7d56238698e",
+      "url": "https://dexscreener.com/cardano/bdf5e1ccc9aea3c8d587cc6b6fb74ea531538e96ab8cb7d56238698e"
+    },
+    "usdd": {
+      "chain": "solana",
+      "dex": "raydium",
+      "symbol": "USDD",
+      "name": "USDD",
+      "liquidity_usd": 209578799,
+      "address": "73fZSffhx1tGDoe1S8Re9znpv5h7BfMMKYNvmjgYAnoa",
+      "pair_address": "9KRgQCET9xivTfKSppgBraQpqZmiKe8H8QmUbehgn7Lv",
+      "url": "https://dexscreener.com/solana/9krgqcet9xivtfksppgbraqpqzmike8h8qmubehgn7lv"
+    },
+    "usdt0": {
+      "chain": "mantle",
+      "dex": "agni",
+      "symbol": "USDT0",
+      "name": "USDT0",
+      "liquidity_usd": 1461611,
+      "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "pair_address": "0x0d290C8E7F3fFA5267de4b1f9f6F6D8d578624Ac",
+      "url": "https://dexscreener.com/mantle/0x0d290c8e7f3ffa5267de4b1f9f6f6d8d578624ac"
+    },
+    "wbtc": {
+      "chain": "starknet",
+      "dex": "ekubo",
+      "symbol": "WBTC",
+      "name": "Wrapped BTC",
+      "liquidity_usd": 4195528,
+      "address": "0x03fe2b97c1fd336e750087d68b9b867997fd64a2661ff3ca5a7c771641e8e7ac",
+      "pair_address": "0x03fe2b97c1fd336e750087d68b9b867997fd64a2661ff3ca5a7c771641e8e7ac-0x0787150e306e6eae6e3f79dea881770e8bbff2c1b8eb490f969669ee945b3135-34028236692093847977029636859101184-200-0x0",
+      "url": "https://dexscreener.com/starknet/0x03fe2b97c1fd336e750087d68b9b867997fd64a2661ff3ca5a7c771641e8e7ac-0x0787150e306e6eae6e3f79dea881770e8bbff2c1b8eb490f969669ee945b3135-34028236692093847977029636859101184-200-0x0"
+    },
+    "wtao": {
+      "chain": "ethereum",
+      "dex": "uniswap",
+      "symbol": "wTAO",
+      "name": "Wrapped TAO",
+      "liquidity_usd": 1996672,
+      "address": "0x77E06c9eCCf2E797fd462A92B6D7642EF85b0A44",
+      "pair_address": "0x433a00819C771b33FA7223a5B3499b24FBCd1bBC",
+      "url": "https://dexscreener.com/ethereum/0x433a00819c771b33fa7223a5b3499b24fbcd1bbc"
+    }
+  },
+  "security": {
+    "axis": {
+      "goplus_honeypot": false,
+      "honeypot_is": false,
+      "buy_tax": 0,
+      "sell_tax": 0
+    },
+    "coinbase-wrapped-staked-eth": {
+      "goplus_honeypot": null,
+      "honeypot_is": false,
+      "buy_tax": 0,
+      "sell_tax": 0
+    },
+    "doppler-finance": {
+      "goplus_honeypot": false,
+      "honeypot_is": false,
+      "buy_tax": 0,
+      "sell_tax": 0
+    },
+    "helius-staked-sol": {
+      "goplus_honeypot": false,
+      "honeypot_is": null,
+      "buy_tax": null,
+      "sell_tax": null
+    },
+    "infinifi": {
+      "goplus_honeypot": false,
+      "honeypot_is": null,
+      "buy_tax": 0,
+      "sell_tax": 0
+    },
+    "symbiotic": {
+      "goplus_honeypot": false,
+      "honeypot_is": false,
+      "buy_tax": 0,
+      "sell_tax": 0
+    },
+    "usdd": {
+      "goplus_honeypot": false,
+      "honeypot_is": null,
+      "buy_tax": null,
+      "sell_tax": null
+    },
+    "wtao": {
+      "goplus_honeypot": false,
+      "honeypot_is": false,
+      "buy_tax": 0,
+      "sell_tax": 0
+    }
+  },
+  "detail_errors": []
+}
